@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <button id="menu-toggle">&#9776;</button>
+        <nav>
+            <ul id="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <section id="inicio" class="animar">
+        <h2>Bem-vindo ao meu mundo criativo!</h2>
+        <img src="img/gabriel1.jpg" alt="Minha Foto" class="imagem-perfil">
+        <p>Publicitário & Desenvolvedor</p>
+        <a href="#contato" class="botao">Entre em contato</a>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="conteudo-sobre">
+            <img src="img/gabriel3.jpg" alt="Foto de perfil" class="foto-perfil">
+            <div class="texto-sobre">
+                <p id="intro-text">
+                    Sempre fui apaixonado por contar histórias e tecnologia. Desde cedo, me senti atraído pela forma como as palavras podem criar experiências, conectar pessoas e transformar realidades. Esse interesse se concretizou na minha trajetória acadêmica e profissional, onde consegui unir minha habilidade criativa com uma curiosidade insaciável pelas novas tecnologias.
+                </p>
+                <p id="full-text" style="display:none;">
+                    Minha jornada começou na publicidade, um campo onde a comunicação era o centro de tudo. Durante meu estágio no SERPRO, uma das maiores empresas de tecnologia do Brasil, tive a chance de mergulhar no mundo digital de uma forma única. Como analista de comunicação, não apenas aprendi sobre a importância da narrativa em um ambiente corporativo, mas também me envolvi em projetos desafiadores, como o desenvolvimento de chatbots e a criação de cursos focados em temas essenciais, como governança, riscos e conformidade. Percebi que as histórias, mesmo as mais técnicas, podem ser contadas de maneira envolvente e acessível, com o poder de transformar percepções e gerar mudanças.
+                    Quando trabalhei como mídia social em uma agência de marketing, aprofundei meus conhecimentos sobre redes sociais. Criei conteúdo dinâmico e estratégias de engajamento para marcas e comunidades online. Mas o que realmente me chamou a atenção foi a maneira como as tecnologias emergentes estavam mudando a forma como as pessoas consumiam informação. Percebi que a comunicação não era mais apenas sobre enviar mensagens, mas sobre criar experiências e conexões autênticas. 
+                    Enquanto cursava Publicidade e Propaganda, minha paixão por tecnologia floresceu ainda mais. Decidi que era hora de alavancar minhas habilidades para o próximo nível. Não queria me contentar apenas em criar conteúdo; queria ser parte da transformação digital. O passo mais natural foi alavancar minha carreira na área de TI, onde pude explorar ainda mais minhas habilidades em programação e design. O que antes era uma combinação de comunicação criativa agora se tornava uma jornada para entender como a tecnologia poderia gerar e expandir minhas ideias. 
+                    Hoje, busco oportunidades em empresas que compartilham dessa visão: unir comunicação e tecnologia de uma forma que crie experiências imersivas, impactantes e capazes de transformar o cotidiano das pessoas. Não estou apenas acompanhando as tendências, mas estou empenhado em ser parte ativa dessa transformação, onde cada projeto é uma chance de integrar inovação tecnológica e narrativas envolventes.
+                </p>
+                <a href="javascript:void(0);" id="toggle-text" onclick="toggleSobreMim()">Leia mais...</a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <p>Com uma formação que une criatividade e técnica, atuo tanto no universo da publicidade quanto no da tecnologia, integrando o melhor dos dois mundos para entregar soluções digitais completas. Na área da comunicação, desenvolvi sólida experiência em criação de conteúdo criativo, estratégias de marketing digital e storytelling, com foco em Copywriting e engajamento de público. Também domino o planejamento de campanhas, design gráfico e o gerenciamento de redes sociais, sempre com o objetivo de fortalecer a identidade das marcas por meio de uma comunicação eficaz.
+
+          Ao mesmo tempo, venho construindo uma base técnica consistente em desenvolvimento web, com domínio de tecnologias como HTML, CSS e JavaScript, além do aprendizado contínuo em outras linguagens de programação. Tenho foco em design responsivo e interfaces interativas, aplicando boas práticas de usabilidade e inovação em cada projeto.
+          
+          Essa combinação entre comunicação e tecnologia me permite criar produtos digitais que são, ao mesmo tempo, funcionais, visualmente atrativos e estrategicamente pensados para atender diferentes objetivos e públicos.</p>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <p>Confira alguns dos meus trabalhos!</p>
+      <div class="projetos-container">
+          <!-- Projeto 1 -->
+          <div class="projeto">
+              <img src="img/logolinkinlive.png" alt="Projeto 1">
+              <h3>Linkin Live — Projeto Web Interativo de Experiência Musical | Front-End Web Design</h3>
+              <p>
+                  <span class="texto-curto">
+                      O Linkin Live é uma página web interativa desenvolvida com o objetivo de oferecer uma experiência visual e musical imersiva para os fãs da banda Linkin Live...
+                  </span>
+                  <span class="texto-completo" style="display: none;">
+                      O projeto apresenta uma curadoria de apresentações ao vivo da banda, integrando vídeos diretamente do YouTube em uma interface dinâmica, moderna e intuitiva.
+                      <br><br>
+                      O principal destaque da página é um carrossel de imagens interativo, que funciona como uma galeria de shows. Cada slide representa um momento único da banda nos palcos, com links diretos para os vídeos das apresentações. O usuário pode navegar facilmente entre os shows, explorar conteúdos e reviver performances icônicas com apenas um clique.
+                      <br><br>
+                      O design da página foi pensado para criar uma experiência fluida e responsiva, adaptando-se a diferentes tamanhos de tela, desde desktops até dispositivos móveis. A interface combina elementos visuais atrativos, tipografia moderna e uma paleta de cores que remete ao universo sonoro e estético da banda.
+                      <br><br>
+                      Este projeto demonstra conhecimentos sólidos em HTML5, CSS3, JavaScript, Flexbox e princípios de design responsivo. Também reforça habilidades em usabilidade, organização de conteúdo e integração com plataformas externas como o YouTube.
+                      <br><br>
+                      Se você é fã da banda ou simplesmente aprecia boas experiências digitais voltadas para música ao vivo, este projeto é para você!🎸🎤
+                  </span>
+              </p>
+              <a href="javascript:void(0);" class="toggle-text">Leia mais...</a>
+              <a href="https://linkinlive.vercel.app/" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+  
+          <!-- Projeto 2 -->
+          <div class="projeto">
+              <img src="img/doutora miau.png" alt="Projeto 2">
+              <h3>Palestra Dra. Miau - Uma Despedida com Respeito e Conscientização Ambiental | Educação Socioambiental</h3>
+              <p>
+                  <span class="texto-curto">
+                      A Palestra Dra. Miau surgiu como uma iniciativa voltada à conscientização sobre a importância de oferecer uma despedida respeitosa aos animais de estimação...
+                  </span>
+                  <span class="texto-completo" style="display: none;">
+                      A proposta nasceu da necessidade de abordar, com sensibilidade e responsabilidade, o destino final de cães e gatos que marcaram nossas vidas — destacando como essa prática pode honrar suas memórias e, ao mesmo tempo, contribuir para um futuro mais saudável e sustentável.
+                      <br><br>
+                      Mais do que informar, o projeto tem como objetivo emocionar e educar. Por meio de uma linguagem empática, clara e acessível, a apresentação aborda os benefícios emocionais para os tutores e os impactos ambientais positivos de práticas conscientes, como o enterro adequado. A palestra também busca quebrar tabus e abrir espaço para o diálogo sobre questões que, embora delicadas, merecem atenção e respeito.
+                      <br><br>
+                      Alinhada aos Objetivos de Desenvolvimento Sustentável (ODS) da ONU, especialmente os ODS 3 (Saúde e Bem-Estar), ODS 11 (Cidades e Comunidades Sustentáveis) e ODS 15 (Vida Terrestre), a iniciativa reforça o compromisso com a educação ambiental, o cuidado com o solo e o bem-estar coletivo.
+                      <br><br>
+                      Este projeto é um exemplo de como a comunicação pode ser usada como ferramenta de transformação social, combinando afeto, informação e responsabilidade ecológica.
+                  </span>
+                  <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+              </p>
+              <a href="img/palestra doutora miau.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+  
+          <!-- Projeto 3 -->
+          <div class="projeto">
+              <img src="img/jogo.png" alt="Projeto 3">
+              <h3>Jogo do Número Secreto</h3>
+              <p>
+                  <span class="texto-curto">
+                      O "Jogo do Número Secreto" é um projeto desenvolvido com foco em reforçar conceitos fundamentais de lógica de programação e experiência do usuário. Trata-se de um jogo simples, porém altamente envolvente...
+                  </span>
+                  <span class="texto-completo" style="display: none;">
+                      em que o objetivo principal é adivinhar um número secreto escolhido aleatoriamente pelo sistema, dentro de um intervalo de 1 a 50.
+                      <br><br>
+                      A cada tentativa, o jogador recebe dicas que indicam se o número informado é maior ou menor do que o número correto, promovendo uma dinâmica de tentativa e erro que estimula o raciocínio lógico e a persistência. Esse sistema de feedback contínuo garante que o jogador se mantenha engajado até alcançar o resultado final.
+                      <br><br>
+                      O jogo foi desenvolvido com uma interface limpa, responsiva e intuitiva, pensada para proporcionar uma experiência agradável tanto em dispositivos móveis quanto em computadores. A proposta visual simples e direta contribui para a imersão no desafio, tornando-o acessível para usuários de todas as idades.
+                      <br><br>
+                      Além de ser uma ferramenta divertida, o projeto também tem um caráter educacional, ideal para quem deseja aprender ou demonstrar habilidades básicas de desenvolvimento web e lógica de programação aplicada. Pode ser utilizado como um exercício introdutório para estudantes ou como um exemplo prático em portfólios profissionais.
+                  </span>
+              </p>
+              <a href="javascript:void(0);" class="toggle-text">Leia mais...</a>
+              <a href="https://game2-xi.vercel.app/" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+  
+          <!-- Projeto 4 -->
+          <div class="projeto">
+              <img src="img/POenergy.png" alt="Projeto 4">
+              <h3>Planejamento de Comunicação e Marketing Digital com Foco em Redes Sociais</h3>
+              <p>
+                  <span class="texto-curto">
+                      Desenvolver o planejamento de comunicação e marketing digital da PO Energy foi um processo estratégico e criativo...
+                  </span>
+                  <span class="texto-completo" style="display: none;">
+                      guiado por uma análise profunda do cenário digital atual da empresa. Comecei com um diagnóstico completo do público-alvo, concorrência e presença online, utilizando ferramentas como a análise SWOT para mapear oportunidades e desafios. A partir disso, defini objetivos claros como a geração de leads, o fortalecimento da marca e a construção de uma comunidade online engajada. Estruturei estratégias específicas para redes sociais, marketing de conteúdo, tráfego pago e SEO, sempre pensando na personalização das mensagens para cada plataforma. O plano também contou com um cronograma editorial detalhado e metas mensuráveis, garantindo controle e otimização contínua. Essa experiência me permitiu aplicar conhecimentos de branding, planejamento estratégico e marketing digital de forma integrada, com foco em resultados reais para o negócio.
+                  </span>
+                  <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+              </p>
+              <a href="img/plano de comunicacao - POEnergy.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+  
+          <!-- Projeto 5 -->
+          <div class="projeto">
+              <img src="img/redacao.png" alt="Projeto 5">
+              <h3>Redação Otimizada para Blog Institucional</h3>
+              <p>
+                  <span class="texto-curto">
+                      Este projeto consistiu na criação de um artigo informativo e otimizado para blog com o tema “Atas de Registro de Preços no Governo: Como Funcionam e Quais as Vantagens?”...
+                  </span>
+                  <span class="texto-completo" style="display: none;">
+                      A proposta foi traduzir um conteúdo técnico e legal em uma linguagem acessível e clara, voltada a públicos com pouco ou nenhum conhecimento sobre processos de compras públicas. O principal desafio foi transformar informações complexas sobre leis, decretos e mecanismos de contratação pública em uma narrativa simples, prática e atrativa para o leitor. O texto foi estruturado com técnicas de SEO, uso de subtítulos, exemplos práticos e uma chamada para ação (CTA), tornando-o adequado para ambientes institucionais digitais que valorizam a transparência, eficiência e a educação do cidadão.
+                  </span>
+                  <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+              </p>
+              <a href="img/Redação para Blog.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+
+          <!-- Projeto 6 -->
+          <div class="projeto">
+            <img src="img/paraiba.png" alt="Projeto 5">
+            <h3>Copy para Redes Sociais - Paraíba Carne de Sol</h3>
+            <p>
+                <span class="texto-curto">
+                    Atuei como redator responsável pela criação dos textos para as redes sociais do restaurante Paraíba Carne de Sol, com o objetivo de reforçar a identidade nordestina da marca e promover seus eventos, pratos e experiências gastronômicas de forma criativa, leve e envolvente....
+                </span>
+                <span class="texto-completo" style="display: none;">
+                    Minha principal entrega foi um cronograma completo de conteúdos com foco em engajamento e conexão com o público, incluindo:
+
+                    Textos promocionais para os pratos executivos do dia (frango, costelinha e carne de sol);
+                    
+                    Chamadas para happy hour e música ao vivo;
+                    
+                    Conteúdos afetivos voltados para momentos em família;
+                    
+                    Posts semanais com a agenda musical da casa.
+                    
+                    Todos os copies foram pensados para reforçar o tom de voz regional e autêntico da marca, utilizando expressões típicas do Nordeste e estimulando a interação com o público através de perguntas, marcações e sugestões.
+                </span>
+                <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+            </p>
+            <a href="img/Crono Paraíba.pdf.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
+        </div>
+
+        <!-- Projeto 7 -->
+<div class="projeto">
+    <img src="img/suellen.png" alt="Projeto 7">
+    <h3>Cobertura de Ação Comercial - Cimed</h3>
+    <p>
+        <span class="texto-curto">
+            Produzi a cobertura visual da ação de um representante comercial da Cimed, desenvolvendo materiais dinâmicos e alinhados à identidade da marca para redes sociais. A entrega envolveu a criação de elementos visuais minimalistas, artes animadas e abertura de vídeo no estilo Instagram Stories...
+        </span>
+        <span class="texto-completo" style="display: none;">
+            O projeto consistiu na construção de uma narrativa visual moderna e profissional para reforçar a presença da representante Cimed nas redes sociais. Entre as principais entregas estão:
+
+            - Criação de elementos gráficos minimalistas (linhas, ícones, setas e logo estilizada);
+            
+            - Desenvolvimento de uma abertura de vídeo em formato vertical (1080x1920px), com fundo amarelo característico da marca, animações suaves e estética moderna;
+            
+            - Adaptação para o formato de Story do Instagram, respeitando o padrão visual da Cimed;
+            
+            - Organização dos materiais para facilitar a edição e a publicação em diferentes plataformas digitais.
+
+            O trabalho teve como foco traduzir a energia, inovação e proximidade da representante da Cimed com seu público, utilizando técnicas de design responsivo e storytelling visual.
+        </span>
+        <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+    </p>
+    <a href="img/acao cimed.mp4" target="_blank" class="botao-projeto">Ver Projeto</a>
+</div>
+
+<!-- Projeto 8 -->
+<div class="projeto">
+    <img src="img/farma.png" alt="Projeto 8">
+    <h3>Vídeo Promocional – Rede Farmanobre</h3>
+    <p>
+        <span class="texto-curto">
+            Desenvolvi um vídeo institucional para a Rede Farmanobre, focado em transmitir acolhimento, empatia e confiança ao público da marca. A peça foi pensada especialmente para redes sociais, reforçando o cuidado e o atendimento humano como diferenciais da farmácia...
+        </span>
+        <span class="texto-completo" style="display: none;">
+            Este vídeo promocional da Rede Farmanobre foi criado com o objetivo de gerar identificação e confiança com o público. Todo o conteúdo foi elaborado com foco no emocional, traduzindo o compromisso da marca com o cuidado e o bem-estar dos clientes.
+
+            Atuei nas seguintes etapas:
+
+            - Criação do roteiro e da estrutura narrativa do vídeo;
+            
+            - Escolha da trilha sonora adequada para reforçar a mensagem emocional;
+            
+            - Direção criativa e edição completa do material, com cortes suaves, ritmo harmonioso e estética humanizada;
+            
+            - Adaptação para formatos otimizados para redes sociais e mídia digital.
+
+            O resultado é um conteúdo audiovisual direto e impactante, que reforça a imagem da Farmanobre como uma farmácia próxima, confiável e sensível às necessidades das pessoas.
+        </span>
+        <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+    </p>
+    <a href="img/promocao farmanobre.mp4" target="_blank" class="botao-projeto">Ver Projeto</a>
+</div>
+
+
+
+      </div>
+  </section>
+  
+
+    <section id="conquistas-academicas" class="conquistas-academicas">
+        <h2>Conquistas Acadêmicas</h2>
+        <div class="conquista">
+            <h3>Publicidade e Propaganda</h3>
+            <p>Instituição: CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS</p>
+            <p>Descrição: O curso de Publicidade forma profissionais criativos e estratégicos para o mercado da comunicação. Estou aprendendo a criar campanhas, analisar o mercado, entender o comportamento do consumidor e usar diferentes canais de comunicação para transmitir mensagens eficazes. Focado em estratégias digitais, mídias sociais e marketing de conteúdo.</p>
+        </div>
+        <div class="conquista">
+            <h3>Engenharia de Software</h3>
+            <p>CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS</p>
+            <p>Descrição: O curso de Engenharia de Software forma profissionais para criar e manter sistemas de software de alta qualidade. Estou aprendendo a programar, analisar requisitos, projetar arquiteturas de software, testar e gerenciar projetos.</p>
+        </div>
+    </section>
+    
+    
+    
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Vamos trabalhar juntos? Entre em contato comigo.
+        </p>
+        <a href="mailto:ogabrielpaes@gmail.com" class="botao">ogabrielpaes@gmail.com</a>
+        <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/ogabrielpaes/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ogabrielpaes"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Meu Portfólio</p>
+        <p>© 2025 Gabriel Paes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

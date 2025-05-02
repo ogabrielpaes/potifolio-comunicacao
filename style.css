@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('img/fundo.webp')no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px 50px;
+    background: rgba(0, 139, 139, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 28px;
+    flex: 1;
+    color: white;
+}
+
+/* Estilizando o menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #7FFFD4;
+}
+
+/* Estilização do botão de menu (hambúrguer) */
+#menu-toggle {
+    display: none; 
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    /* Estilização do menu responsivo */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none; /* Oculta o menu por padrão */
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav a {
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Exibir o botão do menu */
+    #menu-toggle {
+        display: block;
+    }
+}
+#inicio {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+#inicio img, #inicio p, #inicio .botao {
+    display: block;
+    margin: 10px auto; 
+}
+
+section {
+    text-align: justify;
+    padding: 120px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+.animar {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.imagem-perfil {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0;
+    border: 3px solid #7FFFD4;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #7FFFD4;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+/* Efeito hover */
+.botao:hover {
+    background: #40E0D0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .botao {
+        padding: 12px 25px; 
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .botao {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+.sobre {
+    background: linear-gradient(135deg, rgba(0, 139, 139, 0.8), rgba(0, 139, 139, 0.6)), url('background-sobre.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    text-align: justify;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    color: #ddd;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.sobre p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00CED1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sobre p:hover::first-letter {
+    transform: scale(1.3);
+}
+
+#toggle-text {
+    color: #00CED1;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#toggle-text:hover {
+    color: #40E0D0;
+}
+
+/* Novos estilos */
+.conteudo-sobre {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.foto-perfil {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00CED1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+}
+
+.texto-sobre {
+    flex: 1;
+    min-width: 260px;
+}
+
+@media (max-width: 768px) {
+    .sobre {
+        padding: 40px 15px;
+    }
+
+    .sobre h2 {
+        font-size: 2rem;
+    }
+
+    .sobre p {
+        font-size: 1rem;
+    }
+
+    .projetos-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .projeto {
+        width: 100%;
+    }
+
+    .conteudo-sobre {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto-sobre {
+        text-align: justify;
+    }
+}
+
+/* Container dos projetos */
+.projetos-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de cada projeto */
+.projeto {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Imagem do projeto */
+.projeto img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Justificar o texto */
+.projeto p {
+    text-align: justify;
+    color: white;
+}
+
+/* Remover sublinhado e definir cor branca para os textos */
+.projeto h3, .projeto a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Botão "Ver Projeto" */
+.projeto .botao-projeto {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #7FFFD4;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Efeito hover no botão */
+.projeto .botao-projeto:hover {
+    background-color: #5FD3A1;
+}
+
+/* Estilo do carrossel */
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave ao mover o carrossel */
+    overflow: hidden; /* Esconde os itens que ficam fora da tela */
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .projeto {
+        width: 45%;
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+    .projeto {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Estilo dos botões do carrossel */
+.carrossel-botao {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+/* Botão "Anterior" */
+.carrossel-botao.anterior {
+    left: 10px;
+}
+
+/* Botão "Próximo" */
+.carrossel-botao.proximo {
+    right: 10px;
+}
+
+/* Ajustando a largura e comportamento para o carrossel */
+.carrossel .projeto {
+    flex: 0 0 100%; /* Cada projeto ocupa 100% da largura do carrossel */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao mover os projetos */
+}
+
+
+
+#conquistas-academicas {
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(0, 139, 139, 0.8), rgba(0, 139, 139, 0.6)), url('background-sobre.jpg') no-repeat center center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+#conquistas-academicas h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff; 
+    margin-bottom: 30px;
+}
+
+.conquista {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conquista h3 {
+    font-size: 1.8rem;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.conquista p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    #conquistas-academicas {
+        padding: 20px;
+    }
+    .conquista {
+        padding: 15px;
+    }
+    #conquistas-academicas h2 {
+        font-size: 2rem;
+    }
+    .conquista h3 {
+        font-size: 1.5rem;
+    }
+    .conquista p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilização da seção de contato */
+#contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30vh; /* Altura total da janela */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Estilo do título da seção */
+#contato h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Estilo do parágrafo da seção */
+#contato p {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+
+footer {
+    padding: 20px;
+    background: #008080;
+    font-size: 14px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.redes-sociais a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #7FFFD4;
+}
+
+.toggle-text {
+    color: #008b8b;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+  }
