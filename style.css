@@ -409,15 +409,6 @@ h1, h2, h3 {
     transition: transform 0.3s ease-in-out; /* Transição suave ao mover os projetos */
 }
 
-.video-producao {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  margin-top: 10px;
-}
-
 
 #conquistas-academicas {
     padding: 40px;
