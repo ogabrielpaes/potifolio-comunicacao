@@ -96,4 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Função para abrir links/arquivos em nova aba (vídeo incluso)
+    window.abrirEmNovaAba = function (url) {
+        window.open(url, "_blank");
+    };
 });
