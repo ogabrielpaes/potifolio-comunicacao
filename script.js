@@ -102,3 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
         window.open(url, "_blank");
     };
 });
+
+document.querySelectorAll('.botao-play').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const videoLink = btn.getAttribute('data-video');
+    const modal = document.getElementById('modal-video');
+    const iframe = modal.querySelector('iframe');
+    iframe.src = videoLink;
+    modal.classList.add('active');
+  });
+});
+
