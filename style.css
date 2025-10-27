@@ -194,7 +194,7 @@ h1,h2,h3 {
 /* ===================== */
 .secao-webserie {
     padding: 80px 20px;
-    background: linear-gradient(180deg, #f9fafa 0%, #eefdfc 100%);
+    background: linear-gradient(180deg, #801603 0%, #eefdfc 100%);
 }
 
 .secao-webserie .container {
@@ -204,14 +204,14 @@ h1,h2,h3 {
 
 .titulo-secao {
     font-size: 2.5rem;
-    color: #006d6c;
+    color: #fcfcfc;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .subtitulo-secao {
     font-size: 1.2rem;
-    color: #004f4e;
+    color: #fcfcfc;
     margin-bottom: 50px;
 }
 
