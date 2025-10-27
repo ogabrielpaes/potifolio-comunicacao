@@ -1,3 +1,6 @@
+/* ===================== */
+/* RESET E BASE */
+/* ===================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +10,13 @@
 
 body {
     font-family: 'Orbitron', sans-serif;
-    background: url('img/fundo2.png')no-repeat center center fixed;
+    background: url('img/fundo2.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     color: white;
     text-align: center;
 }
+
 body::before {
     content: "";
     position: absolute;
@@ -20,21 +24,24 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
 }
 
+/* ===================== */
+/* HEADER E NAV */
+/* ===================== */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     padding: 15px 50px;
     background: rgba(0, 139, 139, 0.9);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     flex-wrap: wrap;
 }
 
@@ -44,13 +51,10 @@ header h1 {
     color: white;
 }
 
-/* Estilizando o menu */
 nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
-    margin: 0;
-    padding: 0;
 }
 
 nav ul li {
@@ -68,86 +72,56 @@ nav a:hover {
     color: #7FFFD4;
 }
 
-/* Estilização do botão de menu (hambúrguer) */
 #menu-toggle {
-    display: none; 
+    display: none;
     font-size: 24px;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
 }
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    header h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    /* Estilização do menu responsivo */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        display: none; /* Oculta o menu por padrão */
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    nav a {
-        font-size: 18px;
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
-
-    /* Exibir o botão do menu */
-    #menu-toggle {
-        display: block;
-    }
-}
+/* ===================== */
+/* SEÇÃO INICIAL */
+/* ===================== */
 #inicio {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
 }
 
 #inicio img, #inicio p, #inicio .botao {
     display: block;
-    margin: 10px auto; 
+    margin: 10px auto;
 }
 
+/* ===================== */
+/* SEÇÕES E ANIMAÇÕES */
+/* ===================== */
 section {
     text-align: justify;
     padding: 120px 20px;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0,0,0,0.3);
     margin: 20px auto;
     border-radius: 10px;
     width: 80%;
 }
-h1, h2, h3 {
+
+h1,h2,h3 {
     text-align: center;
 }
+
 .animar {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
 
+/* ===================== */
+/* IMAGENS E BOTÕES GERAIS */
+/* ===================== */
 .imagem-perfil {
     width: 280px;
     height: 280px;
@@ -157,172 +131,153 @@ h1, h2, h3 {
     border: 3px solid #7FFFD4;
 }
 
-.botao {
+.botao, .botao-acesso, .btn-video, .botao-projeto {
     display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Botões específicos */
+.botao {
     padding: 10px 20px;
     background: #7FFFD4;
     color: black;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
     font-size: 1rem;
 }
 
-/* Efeito hover */
 .botao:hover {
     background: #40E0D0;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .botao {
-        padding: 12px 25px; 
-        font-size: 1.2rem;
-        width: 100%;
-        text-align: center; 
-    }
-}
-
-@media (max-width: 480px) {
-    .botao {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
-
-/* ===================== */
-/* 🎬 SEÇÃO WEBSÉRIE */
-/* ===================== */
-
-.secao-webserie {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #f9fafa 0%, #eefdfc 100%);
-}
-
-.secao-webserie .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.titulo-secao {
-  font-size: 2.5rem;
-  color: #006d6c;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.subtitulo-secao {
-  font-size: 1.2rem;
-  color: #004f4e;
-  margin-bottom: 50px;
-}
-
-/* Grade de episódios */
-.grade-episodios {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-/* ===== CARD DO EPISÓDIO ===== */
-.episodio-card {
-  background: #ffffff;
-  border-radius: 15px;
-  overflow: hidden;
-  width: 360px; /* largura do card */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-
-.episodio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Imagem de capa */
-.thumb-video {
-  width: 100%;
-  height: 200px; /* altura da capa */
-  object-fit: cover;
-  border-bottom: 3px solid #009999;
-  transition: filter 0.3s ease;
-}
-
-.episodio-card:hover .thumb-video {
-  filter: brightness(0.85);
-}
-
-/* Conteúdo interno */
-.conteudo-episodio {
-  padding: 20px;
-  text-align: left;
-}
-
-.conteudo-episodio h3 {
-  color: #004f4e;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.conteudo-episodio p {
-  color: #333;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-/* Botão de assistir */
 .btn-video {
-  background: linear-gradient(90deg, #00bfa5, #00796b);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
+    background: linear-gradient(90deg, #00bfa5, #00796b);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1.2rem;
 }
 
 .btn-video:hover {
-  background: linear-gradient(90deg, #00e0c0, #009688);
-  transform: scale(1.05);
+    background: linear-gradient(90deg, #00e0c0, #009688);
+    transform: scale(1.05);
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
-  .episodio-card {
-    width: 45%;
-  }
+.botao-acesso {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 12px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
-  .episodio-card {
+.botao-acesso:hover {
+    background-color: #005f87;
+}
+
+.botao-projeto {
+    padding: 8px 15px;
+    background-color: #7FFFD4;
+    color: black;
+}
+
+.botao-projeto:hover {
+    background-color: #5FD3A1;
+}
+
+/* ===================== */
+/* SEÇÃO WEBSÉRIE */
+/* ===================== */
+.secao-webserie {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #f9fafa 0%, #eefdfc 100%);
+}
+
+.secao-webserie .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-secao {
+    font-size: 2.5rem;
+    color: #006d6c;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitulo-secao {
+    font-size: 1.2rem;
+    color: #004f4e;
+    margin-bottom: 50px;
+}
+
+.grade-episodios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.episodio-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 360px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.episodio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.thumb-video {
     width: 100%;
-  }
-  .thumb-video {
-    height: 190px;
-  }
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #009999;
+    transition: filter 0.3s;
 }
 
+.episodio-card:hover .thumb-video {
+    filter: brightness(0.85);
+}
 
+.conteudo-episodio {
+    padding: 20px;
+    text-align: left;
+}
 
+.conteudo-episodio h3 {
+    color: #004f4e;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
 
+.conteudo-episodio p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* ===================== */
+/* SEÇÃO SOBRE E CONTEÚDO */
+/* ===================== */
 .sobre {
-    background: linear-gradient(135deg, rgba(0, 139, 139, 0.8), rgba(0, 139, 139, 0.6)), url('background-sobre.jpg') no-repeat center center;
+    background: linear-gradient(135deg, rgba(0,139,139,0.8), rgba(0,139,139,0.6)), url('background-sobre.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     padding: 60px 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 100px;
-    text-align: justify;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    margin: 100px auto 0;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.6;
 }
 
@@ -332,15 +287,14 @@ h1, h2, h3 {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #fff;
     text-align: center;
 }
 
 .sobre p {
     font-size: 1.1rem;
     color: #ddd;
-    text-align: justify;
     font-weight: 400;
+    text-align: justify;
 }
 
 .sobre p::first-letter {
@@ -354,163 +308,81 @@ h1, h2, h3 {
     transform: scale(1.3);
 }
 
-#toggle-text {
+#toggle-text, .toggle-text {
     color: #00CED1;
     font-weight: bold;
-    text-decoration: none;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 #toggle-text:hover {
     color: #40E0D0;
 }
 
-/* Novos estilos */
 .conteudo-sobre {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 20px;
-    flex-wrap: wrap;
 }
-
-.btn-video {
-  background-color: #35cf0e; /* Teal da sua paleta */
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-video:hover {
-  background-color: #fb0b0b; /* LightSeaGreen */
-}
-
 
 .texto-sobre {
     flex: 1;
     min-width: 260px;
 }
 
-@media (max-width: 768px) {
-    .sobre {
-        padding: 40px 15px;
-    }
-
-    .sobre h2 {
-        font-size: 2rem;
-    }
-
-    .sobre p {
-        font-size: 1rem;
-    }
-
-    .projetos-container {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .projeto {
-        width: 100%;
-    }
-
-    .conteudo-sobre {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .texto-sobre {
-        text-align: justify;
-    }
-}
-
-/* Container dos projetos */
+/* ===================== */
+/* PROJETOS E CARROSSEL */
+/* ===================== */
 .projetos-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-/* Estilo de cada projeto */
 .projeto {
-    background: rgba(255, 255, 255, 0.1);
+    background-color: #009999;
     padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Imagem do projeto */
-.projeto img {
+.projeto img, .imagem-campanha {
     width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Justificar o texto */
-.projeto p {
-    text-align: justify;
-    color: white;
-}
-
-/* Remover sublinhado e definir cor branca para os textos */
 .projeto h3, .projeto a {
     color: white;
     text-decoration: none;
     display: block;
 }
 
-/* Botão "Ver Projeto" */
-.projeto .botao-projeto {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #7FFFD4;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-/* Efeito hover no botão */
-.projeto .botao-projeto:hover {
-    background-color: #5FD3A1;
-}
-
-/* Estilo do carrossel */
 .carrossel {
     display: flex;
-    transition: transform 0.5s ease; /* Transição suave ao mover o carrossel */
-    overflow: hidden; /* Esconde os itens que ficam fora da tela */
+    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
-/* Responsividade para tablets */
-@media (max-width: 768px) {
-    .projeto {
-        width: 45%;
-    }
+.carrossel .projeto {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Responsividade para smartphones */
-@media (max-width: 480px) {
-    .projeto {
-        width: 100%;
-        padding: 15px;
-    }
-}
-
-/* Estilo dos botões do carrossel */
 .carrossel-botao {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     color: white;
     padding: 10px;
     border: none;
@@ -519,134 +391,46 @@ h1, h2, h3 {
     border-radius: 5px;
 }
 
-/* Botão "Anterior" */
-.carrossel-botao.anterior {
-    left: 10px;
-}
+.carrossel-botao.anterior { left: 10px; }
+.carrossel-botao.proximo { right: 10px; }
 
-/* Botão "Próximo" */
-.carrossel-botao.proximo {
-    right: 10px;
-}
-
-/* Ajustando a largura e comportamento para o carrossel */
-.carrossel .projeto {
-    flex: 0 0 100%; /* Cada projeto ocupa 100% da largura do carrossel */
-    transition: transform 0.3s ease-in-out; /* Transição suave ao mover os projetos */
-}
-
-.imagem-campanha {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  margin: 20px auto;
-  display: block;
-}
-
-.botao-acesso {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #7FFFD4; /* cor aqua */
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
-}
-
-.botao-acesso:hover {
-  background-color: #ffce33;
-}
-
-.projeto {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
+/* ===================== */
+/* CONQUISTAS ACADÊMICAS */
+/* ===================== */
 #conquistas-academicas {
     padding: 40px;
-    background: linear-gradient(135deg, rgba(0, 139, 139, 0.8), rgba(0, 139, 139, 0.6)), url('background-sobre.jpg') no-repeat center center;
+    background: linear-gradient(135deg, rgba(0,139,139,0.8), rgba(0,139,139,0.6)), url('background-sobre.jpg') no-repeat center center;
     color: #333;
-    font-family: 'Arial', sans-serif;
-}
-
-#conquistas-academicas h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ffffff; 
-    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
 }
 
 .conquista {
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.conquista h3 {
-    font-size: 1.8rem;
-    color: #00796b;
-    margin-bottom: 10px;
-}
+.conquista h3 { color: #00796b; font-size: 1.8rem; margin-bottom: 10px; }
+.conquista p { font-size: 1.1rem; line-height: 1.6; color: #555; }
 
-.conquista p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-@media (max-width: 768px) {
-    #conquistas-academicas {
-        padding: 20px;
-    }
-    .conquista {
-        padding: 15px;
-    }
-    #conquistas-academicas h2 {
-        font-size: 2rem;
-    }
-    .conquista h3 {
-        font-size: 1.5rem;
-    }
-    .conquista p {
-        font-size: 1rem;
-    }
-}
-
-/* Estilização da seção de contato */
+/* ===================== */
+/* CONTATO E FOOTER */
+/* ===================== */
 #contato {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 30vh; /* Altura total da janela */
+    height: 30vh;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s;
+    background: rgba(255,255,255,0.1);
 }
 
-/* Estilo do título da seção */
-#contato h2 {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
-/* Estilo do parágrafo da seção */
-#contato p {
-    font-size: 1rem;
-    color: #fff;
-    margin-bottom: 30px;
-}
-
+#contato h2 { font-size: 2rem; color: white; margin-bottom: 20px; }
+#contato p { font-size: 1rem; color: #fff; margin-bottom: 30px; }
 
 footer {
     padding: 20px;
@@ -671,9 +455,37 @@ footer {
     color: #7FFFD4;
 }
 
-.toggle-text {
-    color: #008b8b;
-    font-weight: bold;
-    cursor: pointer;
-    margin-left: 5px;
-  }
+/* ===================== */
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .episodio-card { width: 45%; }
+}
+
+@media (max-width: 768px) {
+    header { padding: 15px 20px; flex-direction: column; text-align: center; }
+    header h1 { font-size: 24px; margin-bottom: 10px; }
+    nav ul { flex-direction: column; align-items: center; width: 100%; display: none; }
+    nav ul li { width: 100%; padding: 10px 0; }
+    nav a { font-size: 18px; width: 100%; padding: 10px; display: block; }
+    #menu-toggle { display: block; }
+
+    .botao { padding: 12px 25px; font-size: 1.2rem; width: 100%; }
+    .sobre { padding: 40px 15px; }
+    .sobre h2 { font-size: 2rem; }
+    .sobre p { font-size: 1rem; }
+    .projetos-container { flex-direction: row; align-items: center; }
+    .projeto { width: 45%; text-align: center; }
+    .conteudo-sobre { flex-direction: column; align-items: center; text-align: center; }
+    .texto-sobre { text-align: justify; }
+    #conquistas-academicas { padding: 20px; }
+    .conquista { padding: 15px; }
+    #conquistas-academicas h2 { font-size: 2rem; }
+    .conquista h3 { font-size: 1.5rem; }
+    .conquista p { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .botao { font-size: 1rem; padding: 10px 20px; }
+    .projeto { width: 100%; padding: 15px; }
+    .thumb-video { height: 190px; }
+}
