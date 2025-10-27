@@ -191,7 +191,10 @@ h1, h2, h3 {
     }
 }
 
-/* Seção Websérie */
+/* ===================== */
+/* 🎬 SEÇÃO WEBSÉRIE */
+/* ===================== */
+
 .secao-webserie {
   padding: 80px 20px;
   background: linear-gradient(180deg, #f9fafa 0%, #eefdfc 100%);
@@ -216,6 +219,7 @@ h1, h2, h3 {
   margin-bottom: 50px;
 }
 
+/* Grade de episódios */
 .grade-episodios {
   display: flex;
   flex-wrap: wrap;
@@ -223,29 +227,39 @@ h1, h2, h3 {
   justify-content: center;
 }
 
+/* ===== CARD DO EPISÓDIO ===== */
 .episodio-card {
   background: #ffffff;
   border-radius: 15px;
   overflow: hidden;
-  width: 350px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 360px; /* largura do card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .episodio-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Imagem de capa */
 .thumb-video {
   width: 100%;
-  height: 200px;
+  height: 200px; /* altura da capa */
   object-fit: cover;
   border-bottom: 3px solid #009999;
+  transition: filter 0.3s ease;
 }
 
+.episodio-card:hover .thumb-video {
+  filter: brightness(0.85);
+}
+
+/* Conteúdo interno */
 .conteudo-episodio {
   padding: 20px;
+  text-align: left;
 }
 
 .conteudo-episodio h3 {
@@ -261,6 +275,7 @@ h1, h2, h3 {
   line-height: 1.5;
 }
 
+/* Botão de assistir */
 .btn-video {
   background: linear-gradient(90deg, #00bfa5, #00796b);
   color: #fff;
@@ -277,11 +292,22 @@ h1, h2, h3 {
   transform: scale(1.05);
 }
 
+/* Responsividade */
+@media (max-width: 1024px) {
+  .episodio-card {
+    width: 45%;
+  }
+}
+
 @media (max-width: 768px) {
   .episodio-card {
     width: 100%;
   }
+  .thumb-video {
+    height: 190px;
+  }
 }
+
 
 
 
