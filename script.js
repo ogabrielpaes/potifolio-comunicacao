@@ -113,3 +113,6 @@ document.querySelectorAll('.botao-play').forEach(btn => {
   });
 });
 
+ document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+  });
